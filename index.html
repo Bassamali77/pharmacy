@@ -1,0 +1,213 @@
+<!-- Created by Codenath -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Login Page 4</title>
+  <style>
+    /* Created by Codenath */
+
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Almarai&family=Cairo:wght@300;600;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+font-family: 'Cairo', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+::placeholder { 
+  color: white;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+::-ms-input-placeholder { 
+  color: white;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  direction:rtl;
+}
+.container{
+  height: 100vh;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+}
+.login-div,.signup-div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  flex-direction: column;
+  background: #34BDC5;
+}
+.signup-div{
+  left: -100%;
+}
+.login-div{
+  justify-content: center;
+  grid-gap: 20px;
+}
+.logo{
+  height: 150px;
+  width: 150px;
+  background: rgba(255, 255, 255, 0.2);
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://tdcloginpage4.glitch.me/logo.png");
+  border-radius: 20px;
+}
+.c-name{
+  color: white;
+  font-weight: 1000;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+  padding: 20px;
+  grid-gap: 20px;
+}
+.login-div form{
+  height: 400px;
+}
+.box{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+  justify-content: center;
+  width: 90%;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+.box input{
+  border: none;
+  outline: none;
+  height: 100%;
+  background: none;
+  width: 80%;
+  color: white;
+  font-weight: 1000;
+}
+.box i{
+  border-radius: 50%;
+  padding: 18px;
+  background: white;
+  color: #34BDC5;
+}
+.submit-btn{
+  width: 90%;
+  border: none;
+  font-weight: 1000;
+  text-transform: uppercase;
+  color: #34BDC5;
+  border-radius: 25px ;
+  background: white;
+  height: 50px;
+  cursor: pointer;
+}
+.ex-text{
+  margin-top: 20px  ;
+  color: white;
+}
+.ex-text a{
+  color: white;
+  text-decoration: none;
+  font-weight: 1000;
+}
+.fp{
+  text-decoration: none;
+  color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="login-div">
+      <div class="logo"></div>
+      <div class="c-name">بسام سوفت</div>
+      <form action="#">
+        <div class="box">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="اسم المستخدم" required>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-key"></i>
+          <input type="password" placeholder="كلمة المرور" required>
+        </div>
+        <input type="submit" class="submit-btn" value="دخول">
+        <p class="ex-text"> لانملك اي حساب? <a href="#" class="sub">سجل الان</a></p>
+      </form>
+      <a href="#" class="fp">هل نسيت كلمة المرور?</a>
+    </div>
+
+
+    <div class="signup-div">
+      <div class="logo"></div>
+      <div class="c-name"> تسجيل جديد</div>
+      <form action="#">
+        <div class="box">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="اسمك" required>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="البريد الالكتروني" required>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-key"></i>
+          <input type="password" placeholder="كلمة المرور" required>
+        </div>
+        <input type="submit" class="submit-btn" value="تسجيل">
+        <p class="ex-text">انا املك حساب ? <a href="#" class="lb">دخول</a></p>
+      </form>
+      <a href="#" class="fp">تواصل معنا</a>
+    </div>
+  </div>
+</body>
+  <script type="text/javascript">
+    let signupBtn = document.querySelector(".sub");
+    let loginBtn= document.querySelector(".lb");  
+    let signupDiv = document.querySelector(".signup-div");
+    let loginDiv = document.querySelector(".login-div");
+
+    loginBtn.addEventListener("click", event =>{
+      signupDiv.style.left= "-100%";
+    })
+    signupBtn.addEventListener("click", event=>{
+      signupDiv.style.left = "0";
+    })
+  </script>
+  </html>
